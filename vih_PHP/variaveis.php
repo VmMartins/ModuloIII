@@ -17,5 +17,9 @@ var_dump($num);
 echo"<br>";
 var_dump($res);
 
+//&& = Quando todas forem verdadeiras será verdade.
+//|| = quado pelo menos 1 for verdadira será verdade.
+// ! = verdade => falso e falso => verdade.
+
 
 ?>
