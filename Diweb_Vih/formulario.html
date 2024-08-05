@@ -16,6 +16,47 @@
 
 <body>
     <!-- corpo do site -->
+
+    <form action="recebe.php" method="post">
+        <!-- Com method="get" os dados ficam expostos no na barra  do site.
+        method="post" as informações ficam mais escondidas-->
+        <fieldset>
+            <legend>Meu Formuláro</legend>
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" required placeholder="Informe seu nome">
+            </p>
+
+            <p>
+                <label for="cpf">CPF: </label>
+                <input type="text" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                    title="Informe o cpf seguindo: xxx.xxx.xxx-xx" maxlength="14" placeholder="Informe seu cpf">
+
+            </p>
+
+            <p>
+
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" required size="30" placeholder="Exemplo: nome23@gmail.com">
+            </p>
+            <p>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" required placeholder="Informe senha" maxlength="8">
+            </p>
+            <p>
+                <label for="sexo">Sexo:</label><br>
+                <input type="radio" name="sexo" value="masculino">Masculino<br>
+                <input type="radio" name="sexo" value="feminino">Feminino<br>
+                <input type="radio" name="sexo" value="outros">Outros<br>
+            </p>
+
+
+            <button type="submit">Enviar</button>
+        </fieldset>
+
+
+    </form>
 </body>
 </head>
 
