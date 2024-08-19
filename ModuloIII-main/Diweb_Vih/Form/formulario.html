@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- para dizer que está trabalhando em html 5.0 -->
+<html lang="pt-br">
+<!-- para adcionar a língua a ser reconhecida -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- para adesão aos caracteres especiais: ã, ç, á. -->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <!-- Garantir que o site rode em qualquer navegador, principalmente o internet explore 6.0
+    content="IE-edge" pode ser alterado para as versões do explore: "IE-6" ou "IE-5", entre outros.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Para garantir que o site se adapte a qualquer tamanho de telas(viewport).  -->
+    <title>Document</title>
+    <!-- Nome do site -->
+
+<body>
+    <!-- corpo do site -->
+
+    <form action="recebe.php" method="post">
+        <!-- Com method="get" os dados ficam expostos no na barra  do site.
+        method="post" as informações ficam mais escondidas-->
+        <fieldset>
+            <legend>Meu Formuláro</legend>
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" required placeholder="Informe seu nome">
+            </p>
+
+            <p>
+                <label for="cpf">CPF: </label>
+                <input type="text" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                    title="Informe o cpf seguindo: xxx.xxx.xxx-xx" maxlength="14" placeholder="Informe seu cpf" disabled
+                    value="333.698.256-90">
+                <!-- disabled => Serve para impedir alteração das informações já prenchidas-->
+            </p>
+            <!-- checked => para exibi as informação no formulário -->
+            <p>
+
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" required size="30" placeholder="Exemplo: nome23@gmail.com">
+            </p>
+            <p>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" required placeholder="Informe senha" maxlength="8">
+            </p>
+            <p>
+                <label for="sexo">Sexo:</label><br>
+                <input type="radio" name="sexo" value="masculino">Masculino<br>
+                <input type="radio" name="sexo" value="feminino">Feminino<br>
+                <input type="radio" name="sexo" value="outros">Outros<br>
+            </p>
+            <p>
+                <label for="tecPre"> Informe a tecnologia preferida:</label><br>
+                <input type="checkbox" name="html">HTML<br>
+                <input type="checkbox" name="php">PHP<br>
+                <input type="checkbox" name="js" checked disabled>JavaScript<br>
+                <input type="checkbox" name="css">CSS<br>
+                <input type="checkbox" name="bd">Banco de Dados<br>
+            </p>
+            <!-- checked disabled= Serve para já deixar selecionado a opção obrigatória e deixar em aberto as demais opções a serem escolhidas. -->
+            <p>
+
+                <label for="">Selecione o curso:</label>
+                <select nome="cursos">
+                    <optgroup>
+                        <option value="">Selecione</option>
+                        <option value="php">PHP</option>
+                        <option value="js">JS</option>
+                        <option value="css">CSS</option>
+                        <option value="bd">Banco de dados</option>
+                        <option value="python" selected>Python</option>
+                        <option value="redes">Redes</option>
+                        <option value="c">Linguagem C</option>
+                    </optgroup>
+                </select>
+                <!-- selected => para deixar uma opção já selecionada, mas pode mudar. -->
+            </p>
+            <p>
+                <!--select>option*10 => Serve para criar 10 <option value=""></option>, de uma só vez. -->
+                <label for="">Selecione o curso:</label>
+                <select name="cursos" id="">
+                    <optgroup label="Cursos Dev">
+                        <option value="">Selecione</option>
+                        <option value="php">PHP</option>
+                        <option value="js">JS</option>
+                        <option value="css">CSS</option>
+                    </optgroup>
+
+                    <optgroup label="Curso Infra">
+
+                        <option value="bd">Banco de dados</option>
+                        <option value="python">Python</option>
+                        <option value="redes">Redes</option>
+
+                    </optgroup>
+                    <optgroup label="Cursos Design">
+                        <option value="c">Linguagem C</option>
+                        <option value="ps">Photoshop</option>
+                        <option value="ill">Illustrador</option>
+                        <option value="ae">After Efects</option>
+                        <option value="co">Corel</option>
+                    </optgroup>
+                </select>
+
+            </p>
+            <p>
+                <label for="data">Data:</label>
+                <input type="date" name="data"><br>
+            </p>
+            <p>
+                <label for="hora">Hora:</label>
+                <input type="time" name="hora">
+            </p>
+
+            <p>
+                <label for="DataHora">Data-hora:</label>
+                <input type="datetime-local" name="datahora">
+            </p>
+            <p>
+                <label for="semana">Semana:</label>
+                <input type="week" name="semana">
+            </p>
+            <p>
+                <label for="arquivo">Arquivo:</label>
+                <input type="file" name="arquivo"><br>
+                <button type="reset">Limpar</button>
+            </p>
+            <p>
+                <label for="descricao">Descrição:</label>
+                <textarea name="descricao" cols="30" rows="10" placeholder="Informe a dúvida:"
+                    maxlength="10"></textarea>
+
+            </p>
+
+
+
+            <button type="submit">Enviar</button>
+
+        </fieldset>
+
+
+    </form>
+</body>
+</head>
+
+</html>
